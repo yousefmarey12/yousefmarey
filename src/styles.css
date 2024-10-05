@@ -1,1 +1,120 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --background: #210124;
+    --secondary-background: #7F0D37;
+    --text: #FEFFFE;
+    --secondary-text: #E5FCF5;
+  }
+  
+
+
+  /* Fonts */
+
+.fn-large-title {
+    font-family: "Source Sans 3";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fn-medium-title {
+    font-family: "Source Sans 3";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fn-small-title {
+    font-family: "Source Sans 3";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fn-body-regular {
+    font-family: "Source Sans 3";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.fn-body-light {
+    font-family: "Source Sans 3";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.fn-body-small {
+    font-family: "Source Sans 3";
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Colors */
+
+.text-font-color {
+    color: var(--text);
+}
+
+.text-secondary-font-color {
+    color: var(--secondary-text);
+}
+.bg {
+    background-color: var(--background);
+}
+
+.secondary-bg {
+    background-color: var(--secondary-background);
+}
+
+.secondary-text-bg {
+    background-color: var(--secondary-text);
+}
+
+.text-bg {
+    background-color: var(--text);
+}
+
+
+/* Other */
+
+.prevent-select { 
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* Position Utilities */
+
+.top-10 {
+    top: 10%
+}
+.top-20 {
+    top: 20%
+}
+.top-30 {
+    top: 30%
+}
+.top-40 {
+    top: 40%
+}
+
+.top-60 {
+    top: 60%
+}
+.top-70 {
+    top: 70%
+}
+.top-80 {
+    top: 80%
+}
+.top-90 {
+    top: 90%
+}

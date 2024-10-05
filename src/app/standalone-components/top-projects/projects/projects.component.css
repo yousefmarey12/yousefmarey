@@ -1,0 +1,30 @@
+.projects-container {
+    background-color: var(--secondary-background);
+    border-radius: 20px;
+    padding: 50px 0 0 0;
+}
+
+
+.top-project {
+
+    width: 95%;
+    height: 95%;
+    border-radius: 75%;
+    border: 2px solid var(--secondary-text);
+    background: url(../../../../../public/project1.png) lightgray 50% / cover no-repeat;
+}
+
+.top-project-container {
+    aspect-ratio: 1 / 1;
+    padding: 0px 1.316px 1.282px 1.974px;
+    width: 150px;
+    height: 150px;
+
+}
+
+
+.testing {
+    opacity: 0.6;
+    box-shadow: 0px 10px 4px 0px var(--Secondary-Font, #E5FCF5);
+    transform: translateY(-25px);
+}

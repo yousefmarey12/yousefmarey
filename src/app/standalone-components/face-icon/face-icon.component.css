@@ -1,0 +1,13 @@
+.face-icon-container {
+    padding: 6.306px 13.134px 12.613px 8.06px;
+    height: 200px;
+    width: 200px;
+}
+
+.face-icon {
+    aspect-ratio: 1/1;
+    border: 2px solid var(--secondary-background);
+    background: url(../../../../public/yousefpic123.JPG) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+    mix-blend-mode: lighten;
+    border-radius: 50%;
+}
