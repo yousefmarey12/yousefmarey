@@ -1,10 +1,12 @@
 import { Directive, EventEmitter, HostListener, Output } from '@angular/core';
-
-@Directive({ selector: '[swipe]' })
+import { Subject } from 'rxjs';
+@Directive({ selector: '[swipe]',
+    standalone: true
+ })
 export class SwipeDirective {
 
-    @Output() next = new EventEmitter<void>();
-    @Output() previous = new EventEmitter<void>();
+    next = new Subject<void>();
+    prev = new Subject<void>();
 
     swipeCoord = [0, 0];
     swipeTime = new Date().getTime();
@@ -20,6 +22,7 @@ export class SwipeDirective {
     }
 
     onSwipe(e: TouchEvent, when: string) {
+        console.log(e)
         this.swipe(e, when);
     }
 
@@ -40,9 +43,11 @@ export class SwipeDirective {
                 && Math.abs(direction[0]) > Math.abs(direction[1] * 3)) { // Horizontal enough
                 const swipeDir = direction[0] < 0 ? 'next' : 'previous';
                 if (swipeDir === 'next') {
-                    this.next.emit();
+                    console.log("does next emit")
+                    this.next.next();
                 } else {
-                    this.previous.emit();
+                    console.log("does prev emit")
+                    this.prev.next();
                 }
             }
         }

@@ -1,5 +1,6 @@
 <div class="position-relative vh-100 w-100 bg d-flex flex-column prevent-select">
-  <app-header></app-header>
+  <app-navigation [@enterLeave] *ngIf="isClicked"></app-navigation>
+  <app-header (isClickedOut)="toggleIsClicked($event)"></app-header>
   <app-quote-blocks></app-quote-blocks>
   <app-face-icon></app-face-icon>
   <app-projects></app-projects>
