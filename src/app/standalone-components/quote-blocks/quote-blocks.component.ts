@@ -10,64 +10,64 @@ import { SwipeDirective } from '../../shared-directives/swipe.directive';
   templateUrl: './quote-blocks.component.html',
   styleUrl: './quote-blocks.component.css',
   animations: [
-    trigger('enterExit', [
+    // trigger('enterExit', [
      
-      // Swipe left: Right to left
-      transition(':increment', [
-        group([
-          query(':enter', [
-            style({ opacity: 0, transform: 'translateX(-100%) scale(0.8)' }),
-            animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' })),
-          ]),
-          query(':leave', [
-            animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(100%) scale(0.8)' })),
-          ]),
-        ]),
-      ]),
-      // Swipe right: Left to right
-      transition(':decrement', [
-        group([
-          query(':enter', [
-            style({ opacity: 0, transform: 'scale(0.8)' }),
-            animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' })),
-          ]),
-          query(':leave', [
-            animate('300ms ease-in', style({ opacity: 0, transform: 'translate(-100%) scale(0.8)' })),
-          ]),
-        ]),
-      ]),
-    ]),
-    trigger('inner', [
-      state('middle', style({opacity: 1})),
-      state('right', style({opacity: 1})),
-      state('left', style({opacity: 1})),
-      transition(':increment', [
-        group([
-          query('.position-absolute', [
-            animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(50%)' })),
-          ]),
-          query('.col:nth-child(1)', [
-            animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(-50%)' })),
-          ]),
-        ]),
-      ]),
-      // Swipe right: Left to right
-      transition(':decrement', [
-        group([
-          query('.position-absolute', [
-            animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(-50%)' })),
-          ]),
-          query('.col:nth-child(2)', [
-            animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(50%)' })),
-          ]),
-        ]),
-      ]),
-    ]),
-    trigger('container', [
-      transition(':enter, :leave', [
-        query('@*', animateChild()),
-      ]),
-    ]),
+    //   // Swipe left: Right to left
+    //   transition(':increment', [
+    //     group([
+    //       query(':enter', [
+    //         style({ opacity: 0, transform: 'translateX(-100%) scale(0.8)' }),
+    //         animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' })),
+    //       ]),
+    //       query(':leave', [
+    //         animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(100%) scale(0.8)' })),
+    //       ]),
+    //     ]),
+    //   ]),
+    //   // Swipe right: Left to right
+    //   transition(':decrement', [
+    //     group([
+    //       query(':enter', [
+    //         style({ opacity: 0, transform: 'scale(0.8)' }),
+    //         animate('300ms ease-out', style({ opacity: 1, transform: 'scale(1)' })),
+    //       ]),
+    //       query(':leave', [
+    //         animate('300ms ease-in', style({ opacity: 0, transform: 'translate(-100%) scale(0.8)' })),
+    //       ]),
+    //     ]),
+    //   ]),
+    // ]),
+    // trigger('inner', [
+    //   state('middle', style({opacity: 1})),
+    //   state('right', style({opacity: 1})),
+    //   state('left', style({opacity: 1})),
+    //   transition(':increment', [
+    //     group([
+    //       query('.position-absolute', [
+    //         animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(50%)' })),
+    //       ]),
+    //       query('.col:nth-child(1)', [
+    //         animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(-50%)' })),
+    //       ]),
+    //     ]),
+    //   ]),
+    //   // Swipe right: Left to right
+    //   transition(':decrement', [
+    //     group([
+    //       query('.position-absolute', [
+    //         animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(-50%)' })),
+    //       ]),
+    //       query('.col:nth-child(2)', [
+    //         animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(50%)' })),
+    //       ]),
+    //     ]),
+    //   ]),
+    // ]),
+    // trigger('container', [
+    //   transition(':enter, :leave', [
+    //     query('@*', animateChild()),
+    //   ]),
+    // ]),
   ]
 })
 export class QuoteBlocksComponent implements OnInit, AfterViewInit {
@@ -82,12 +82,16 @@ export class QuoteBlocksComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.swipeDirective.next.subscribe(() => {
-      this.shiftArr(this.quotesYousef, true)
-    })
-    this.swipeDirective.prev.subscribe(() => {
-      this.shiftArr(this.quotesYousef, false)
-    })
+    // this.swipeDirective.next.subscribe(() => {
+    //   this.shiftArr(true)
+    // })
+    // this.swipeDirective.prev.subscribe(() => {
+    //   this.shiftArr(false)
+    // })
+  }
+
+  getQuotesYousef(): string[] {
+    return this.getQuotesYousef()
   }
 
    updateVisibleQuotes() {
@@ -100,17 +104,17 @@ export class QuoteBlocksComponent implements OnInit, AfterViewInit {
   }
 
   // Shift array logic when swiping
-  shiftArr(arr: string[], forward: boolean) {
+  shiftArr(forward: boolean) {
     if (forward) {
       // Swipe right: Move to the next set of 3 quotes
       console.log(this.currentNum)
       this.currentNum--
-      this.currentIndex = (this.currentIndex + 1) % arr.length;
+      this.currentIndex = (this.currentIndex + 1) % this.quotesYousef.length;
     } else {
       // Swipe left: Move to the previous set of 3 quotes
       console.log(this.currentNum)
       this.currentNum++
-      this.currentIndex = (this.currentIndex - 1 + arr.length) % arr.length;
+      this.currentIndex = (this.currentIndex - 1 + this.quotesYousef.length) % this.quotesYousef.length;
     }
 
     this.updateVisibleQuotes(); // Update the visible quotes after each swipe

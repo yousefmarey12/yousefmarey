@@ -1,0 +1,10 @@
+<a (mouseenter)="setIn()" (mouseleave)="setOut()" [@hover]="IsIn"  class="d-flex justify-content-start align-items-center offer p-4" style="height: 100px; gap: 12px;">
+        <app-resume *ngIf="icon == 'Resume'"></app-resume>
+        <app-collab *ngIf="icon == 'Collab'"></app-collab>
+        <app-fitness-icon *ngIf="icon == 'Fitness'"></app-fitness-icon>
+        <app-consult *ngIf="icon == 'Consult'"></app-consult>
+
+        <p class="d-flex mb-0 justify-content-start align-items-center flex-shrink-0 w-100 align-baseline text-font-color">
+            {{offerText}}
+        </p>
+    </a>

@@ -1,0 +1,15 @@
+.offer {
+    width: 200px;
+    background-color: var(--secondary-background, #750D37);
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 1px var(--secondary-text, #E5FCF5); 
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* .offer:hover {
+    box-shadow: 2px 4px 4px 3px var(--secondary-tont, #E5FCF5);
+    transform: translateY(-8px);
+    transition: 500ms;
+} */

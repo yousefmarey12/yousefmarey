@@ -1,10 +1,26 @@
 .top-project {
-
+    display: block;
     width: 95%;
     height: 95%;
     border-radius: 50%;
     border: 2px solid var(--secondary-text);
+}
+
+.project-bg1 {
     background: url(../../../../../public/project1.png) lightgray 50% / cover no-repeat;
+}
+
+.project-bg2 {
+    background: url(../../../../../public/project2.png) lightgray 50% / cover no-repeat;
+}
+
+.project-bg3 {
+    background: url(../../../../../public/project3.png) lightgray 50% / cover no-repeat;
+}
+.top-project-wrapper {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
 }
 
 .top-project-container {
@@ -15,4 +31,24 @@
 
 }
 
+.top-project-wrapper {
+display: block;
+cursor: pointer;
+}
 
+/* .top-project:hover {
+    transform: translateY(-25px);
+    opacity: 0.6;
+    box-shadow: 0px 10px 4px 0px #E5FCF5;
+    transition: 500ms;
+}
+
+.text-hover {
+    opacity: 0;
+}
+
+.text-hover:hover {
+    transform: translateY(-45px);
+    opacity: 1;
+    transition: 500ms;
+} */

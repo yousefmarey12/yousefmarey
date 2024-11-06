@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-quote',
@@ -9,4 +9,14 @@ import { Component, Input } from '@angular/core';
 })
 export class QuoteComponent {
   @Input() text!: string
+  @Input() id!: number
+  @Output() onSwitchQuote = new EventEmitter<boolean>();
+
+  shiftRight() {
+    this.onSwitchQuote.next(true)
+  }
+
+  shiftLeft() {
+    this.onSwitchQuote.next(false)
+  }
 }

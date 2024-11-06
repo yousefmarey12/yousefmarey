@@ -6,6 +6,17 @@
     align-items: flex-start;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
 .gap-10 {
     gap: 10px;
 }

@@ -7,11 +7,15 @@ import { ProjectsComponent } from './standalone-components/top-projects/projects
 import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './standalone-components/navigation/navigation.component';
 import { animate, keyframes, style, transition, trigger } from '@angular/animations';
+import { ProjectsDescriptionComponent } from './standalone-components/projectDescription/projects-description/projects-description.component';
+import { OffersComponent } from './standalone-components/resume/offers/offers.component';
+import { TestimonialsComponent } from './standalone-components/testimonials/testimonials/testimonials.component';
+import { FooterComponent } from './standalone-components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, QuoteBlocksComponent, FaceIconComponent, ProjectsComponent, NavigationComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, QuoteBlocksComponent, FaceIconComponent, ProjectsComponent, NavigationComponent, ProjectsDescriptionComponent, OffersComponent, TestimonialsComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
@@ -25,9 +29,10 @@ import { animate, keyframes, style, transition, trigger } from '@angular/animati
   ]
 })
 export class AppComponent {
-    isClicked = true;
+    isClicked = false;
 
     toggleIsClicked(evt: boolean) {
+      console.log(evt)
       this.isClicked = evt
     }
 }

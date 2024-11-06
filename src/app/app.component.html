@@ -1,7 +1,14 @@
-<div class="position-relative vh-100 w-100 bg d-flex flex-column prevent-select">
+<div class="position-relative vh-100 w-100 bg d-flex flex-column prevent-select" >
   <app-navigation [@enterLeave] *ngIf="isClicked"></app-navigation>
-  <app-header (isClickedOut)="toggleIsClicked($event)"></app-header>
+  <app-header (isClickedOut)="toggleIsClicked($event)" style="position: sticky; top: 0; z-index: 5;"></app-header>
+  <div class="{{isClicked ? 'faded-brightness' : '' }}">
   <app-quote-blocks></app-quote-blocks>
   <app-face-icon></app-face-icon>
   <app-projects></app-projects>
+  <app-projects-description></app-projects-description>
+  <app-offers></app-offers>
+  <app-testimonials></app-testimonials>
+  <app-footer></app-footer>
+</div>
+
 </div>

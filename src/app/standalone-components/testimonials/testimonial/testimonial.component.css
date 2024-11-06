@@ -1,0 +1,14 @@
+.img {
+    width: 45px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 2px solid #7F0D37;
+    background: url(../../../../../public/yousefpic123.JPG) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+}
+
+.layout-testimonial {
+    box-shadow: 4px 2px 4px 2px var(--text, #FEFFFE);
+    border-radius: 20px;
+    background-color: var(--secondary-text);
+}

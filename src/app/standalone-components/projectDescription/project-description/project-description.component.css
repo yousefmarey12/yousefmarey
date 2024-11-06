@@ -1,0 +1,44 @@
+.layout-project-pic {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: inherit; /* Matches layout-project-pic color */
+    z-index: -1; /* Keeps it behind the text */
+  }
+.style-project-pic {
+    border-radius: 50px;
+    border: 2px solid var(--secondary-background, #750D37);
+    /* mix-blend-mode: lighten;
+    backdrop-filter: blur(2px); */
+}
+
+.project-bg2 {
+        background: url(../../../../../public/project2.png) lightgray 50% / cover no-repeat;
+}
+
+.project-bg5 {
+    background: url(../../../../../public/project5.png) lightgray 50% / cover no-repeat;
+}
+
+.project-bg1 {
+    background: url(../../../../../public/project1.png) lightgray 50% / cover no-repeat;
+}
+
+.project-bg3 {
+    background: url(../../../../../public/project3.png) lightgray 50% / cover no-repeat;
+}
+
+.color {
+    color: var(--secondary-background);
+}
+.layout-project {
+    box-shadow: 4px 2px 4px 2px var(--text, #FEFFFE);
+    border-radius: 20px;
+}

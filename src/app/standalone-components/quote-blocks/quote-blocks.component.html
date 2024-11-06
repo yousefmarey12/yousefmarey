@@ -1,6 +1,9 @@
 <div class="container mt-4 text-center w-100" style="flex: 1 0 0;">
-    <div class="row" swipe [@container] [@enterExit]="currentNum" [@inner]="currentNum">
-        <ng-container *ngFor="let quote of visibleQuotes; index as i"><app-quote  [text]="quote"   [ngClass]="i == 1 ? 'w-50 position-absolute start-50 translate-middle-x z-2' : 'col'"></app-quote>
+    <div class="row mb-4">
+        <h1 class="text-font-color col-12 text-center fn-medium-title" >nicknames and quotes that describe me from my friends:</h1>
+    </div>
+    <div class="row" swipe >
+        <ng-container *ngFor="let quote of visibleQuotes; index as i"><app-quote (onSwitchQuote)="shiftArr($event)"   [text]="quote" [id]="i"  [ngClass]="i == 1 ? 'w-50 position-absolute start-50 translate-middle-x z-2' : 'col'"></app-quote>
         </ng-container>
     </div>
 </div>

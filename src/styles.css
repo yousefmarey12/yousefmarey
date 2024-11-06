@@ -7,6 +7,7 @@
   
 
 
+
   /* Fonts */
 
 .fn-large-title {
@@ -59,6 +60,9 @@
 
 /* Colors */
 
+.text-background {
+    color: var(--background);
+}
 .text-font-color {
     color: var(--text);
 }
@@ -85,6 +89,10 @@
 .faded-bg {
     background-color: rgba(0, 0, 0, .65);
     background-blend-mode: darken;
+}
+
+.faded-brightness {
+    filter: brightness(70%)
 }
 /* background layouts */
 
@@ -170,5 +178,30 @@
 }
 .top-90 {
     top: 90%
+}
+
+.start-10 {
+    left: 10%
+}
+.start-20 {
+    left: 20%
+}
+.start-30 {
+    left: 30%
+}
+.start-40 {
+    left: 40%
+}
+.start-60 {
+    left: 60%
+}
+.start-70 {
+    left: 70%
+}
+.start-80 {
+    left: 80%
+}
+.start-90 {
+    left: 90%
 }
 
