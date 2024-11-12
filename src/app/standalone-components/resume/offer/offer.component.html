@@ -1,4 +1,4 @@
-<a (mouseenter)="setIn()" (mouseleave)="setOut()" [@hover]="IsIn"  class="d-flex justify-content-start align-items-center offer p-4" style="height: 100px; gap: 12px;">
+<a [href]="href"  (mouseenter)="setIn()" (mouseleave)="setOut()" [@hover]="IsIn"  class="d-flex justify-content-start align-items-center offer p-4" style="height: 100px; gap: 12px;" [download]="download">
         <app-resume *ngIf="icon == 'Resume'"></app-resume>
         <app-collab *ngIf="icon == 'Collab'"></app-collab>
         <app-fitness-icon *ngIf="icon == 'Fitness'"></app-fitness-icon>

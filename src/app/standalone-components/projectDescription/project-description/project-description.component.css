@@ -27,6 +27,10 @@
     background: url(../../../../../public/project5.png) lightgray 50% / cover no-repeat;
 }
 
+.project-bg4 {
+    background: url(../../../../../public/project4.jpg) lightgray 50% / cover no-repeat;
+}
+
 .project-bg1 {
     background: url(../../../../../public/project1.png) lightgray 50% / cover no-repeat;
 }

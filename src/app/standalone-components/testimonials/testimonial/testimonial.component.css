@@ -4,7 +4,14 @@
     flex-shrink: 0;
     border-radius: 50px;
     border: 2px solid #7F0D37;
-    background: url(../../../../../public/yousefpic123.JPG) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+}
+
+.girlIcon {
+    background: url(../../../../../public/girlicon.png) rgb(245, 226, 226) -2px -50% / cover no-repeat;
+}
+
+.ahmed {
+    background: url(../../../../../public/ahmed.jpg) rgb(245, 226, 226) -1px -4% / cover no-repeat;
 }
 
 .layout-testimonial {

@@ -1,10 +1,10 @@
 <a [href]="project.projectLink" class="d-flex  position-relative layout-project secondary-text-bg flex-column flex-shrink-0 justify-content-end align-items-center align-self-stretch height-auto p-4 w-100" style="border-radius: 20px; cursor: pointer; text-decoration: none;">
-    <div class="position-relative" [@hover]="currentState">
+    <div class="position-relative" [@hover]="currentState" (mouseenter)="setMouseEnter()" (mouseleave)="setMouseLeave()">
           <div  [@textHover]="currentState" class="fn-small-title text-background  position-absolute z-3 start-50 w-100 top-50 text-center translate-middle">
             {{project.title}}
           </div>
-      <div class="layout-project-pic  style-project-pic pb-3" [@buttonHover]="currentState"  (mouseenter)="setMouseEnter()" (mouseleave)="setMouseLeave()" 
-           [ngClass]="{'project-bg3': (project.id + 1) == 1, 'project-bg1': (project.id + 1) == 2, 'project-bg2': (project.id + 1) == 3 || (project.id + 1) == 4, 'project-bg5': (project.id + 1) == 5} ">
+      <div class="layout-project-pic  style-project-pic pb-3" [@buttonHover]="currentState" 
+           [ngClass]="{'project-bg1': project.title == 'Netflix-like Streaming Service', 'project-bg2': project.title == 'Easybank Frontend Mentor', 'project-bg3': project.title == 'FitnessHub-AI', 'project-bg4': project.title == 'Open Source Contribution', 'project-bg5': project.title == 'Even & Odd Angular'} ">
 
       </div>
       

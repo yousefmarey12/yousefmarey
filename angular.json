@@ -90,6 +90,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/yousefmarey",
+            "netlifyToken": "nfp_sQrQGq6bcdJnQmC4VGrTtR9V1SDRqqiZe05c",
+            "siteId": ""
+          }
         }
       }
     }

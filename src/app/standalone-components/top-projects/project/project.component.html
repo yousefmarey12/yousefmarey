@@ -1,5 +1,5 @@
 <a [@hover]="currentState" [href]="projectLink" (mouseenter)="setMouseEnter()" (mouseleave)="setMouseLeave()" class="top-project-wrapper" style="cursor: pointer;">
-    <div class="top-project position-relative" [ngClass]="{'project-bg1': projectTitle == 'Netflix-like Streaming Service', 'project-bg2': projectTitle == 'Open Source Contribution', 'project-bg3': projectTitle == 'FitnessHub-AI'}" [@buttonHover]="currentState"></div> 
+    <div class="top-project position-relative" [ngClass]="{'project-bg1': projectTitle == 'Netflix-like Streaming Service', 'project-bg4': projectTitle == 'Open Source Contribution', 'project-bg3': projectTitle == 'FitnessHub-AI'}" [@buttonHover]="currentState"></div> 
     <div [@textHover]="currentState" class="fn-small-title text-hover text-font-color translate-middle position-absolute start-50 top-50 text-center">
       {{projectTitle}}
     </div>   

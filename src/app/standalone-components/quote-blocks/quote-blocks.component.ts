@@ -71,7 +71,7 @@ import { SwipeDirective } from '../../shared-directives/swipe.directive';
   ]
 })
 export class QuoteBlocksComponent implements OnInit, AfterViewInit {
-  quotesYousef: string[] = ["The Mathematician", "My favorite Masry Canadian", "Megamind 2.0", "Hello Stampy"]
+  quotesYousef: string[] = ["The Comp Sci Student 👨‍💻​", "Your fav Masry Canadian ​​🏝️​🍁​", "Caffeine Addict ​☕​", "Gym bro ​​💪​", "Assala and Rashed Al Majid Fan 🎤​"]
   visibleQuotes: string[] = [];
   currentIndex: number = 1; // This tracks the start of the 3-element window
   currentNum: number = 0

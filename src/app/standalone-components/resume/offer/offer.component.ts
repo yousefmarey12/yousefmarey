@@ -1,11 +1,10 @@
 import { CommonModule, NgIfContext } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FitnessIconComponent } from '../../../icons/fitness/fitness.component';
 import { ConsultComponent } from '../../../icons/consult/consult.component';
 import { CollabComponent } from '../../../icons/collab/collab.component';
 import { ResumeComponent } from '../../../icons/resume/resume.component';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-
 @Component({
   selector: 'app-offer',
   standalone: true,
@@ -26,7 +25,25 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     ])
   ]
 })
-export class OfferComponent {
+export class OfferComponent implements OnInit {
+  href!: string
+  download!: string
+  ngOnInit(): void {
+    if (this.icon == 'Collab') {
+        this.href = 'https://wa.me/20109948563'
+        this.download = ''
+    }
+    else {
+      if (this.icon == 'Resume') {
+        this.href = "/yousefresume.pdf"
+        this.download = 'yousefresume.pdf'
+      }
+      else {
+        this.href = "https://fitnesshub-ai.com/ar/home"
+        this.download = ''
+      }
+    }
+  }
   @Input() offerText: string = "Book a consultation"
   @Input() icon: string = "Collab"
   IsIn: string = ''
