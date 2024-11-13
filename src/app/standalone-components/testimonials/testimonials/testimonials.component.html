@@ -1,6 +1,5 @@
 <div #testimonials class="d-flex mt-4 flex-column justify-content-center align-items-center my-4 mx-4">
-    <h2 class="text-font-color fn-medium-title col-12 text-center">The Coolest Friends:</h2>
-    <app-testimonial [title]="'Wijdan Al-Buraiki'" [description]="'Initally, Wijdan was my skincare consultant, and right now she is  my skincare and fashion consultant. When you consult someone who never even thought about skincare his whole life to being obsessed with it, you can say Wijdan can make a very good consultant. Not only did she completely change my overall appearance, but she also completely changed my music taste. Thanks to her, I can\'t stop listening to Rashed Al Majid. \n\n Her emojis: ​☕​😺​✏️​✏️​🕶️​☪️​'"></app-testimonial>
-    <app-testimonial [title]="'Ahmed Elmarasy'" [description]="'Throughout my darkest times, he has been there for me. Ordering flippin burgers late at night, going to the gym together in the morning, and supporting me on my decision. A very good influence, a very strong personality, a very strong mindset, and a very firm mentor. Throughout the 2022/2023 academic year, he was an inspiration. I remember December 23rd, 2022 where we just talked about what we will do in the winter vacation. \n\n His emojis: 💪​📚​🌄​🌇​🥦​'"></app-testimonial>
+    <h2 class="text-font-color fn-medium-title col-12 text-center">Skills:</h2>
+    <app-testimonial *ngFor="let skill of arr; index as i;" [title]="skill.skill" [description]="skill.description" [urlClass]="skill.code"></app-testimonial>
     <!-- <app-testimonial></app-testimonial> -->
 </div>

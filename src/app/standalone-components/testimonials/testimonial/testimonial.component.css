@@ -6,13 +6,30 @@
     border: 2px solid #7F0D37;
 }
 
-.girlIcon {
-    background: url(../../../../../public/girlicon.png) rgb(245, 226, 226) -2px -50% / cover no-repeat;
+.git {
+    background: url(../../../../../public/photos/git.png) rgb(245, 226, 226) -2px -50% / cover no-repeat;
 }
 
-.ahmed {
-    background: url(../../../../../public/ahmed.jpg) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+.angular {
+    background: url(../../../../../public/photos/angular.jpg) rgb(245, 226, 226) -1px -4% / cover no-repeat;
 }
+
+.dsa {
+    background: url(../../../../../public/photos/dsa.jpg) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+}
+
+.oop {
+    background: url(../../../../../public/photos/oop.png) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+}
+
+.webadmin {
+    background: url(../../../../../public/photos/webadmin.png) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+}
+
+.opensource {
+    background: url(../../../../../public/photos/opensource.png) rgb(245, 226, 226) -1px -4% / cover no-repeat;
+}
+
 
 .layout-testimonial {
     box-shadow: 4px 2px 4px 2px var(--text, #FEFFFE);
